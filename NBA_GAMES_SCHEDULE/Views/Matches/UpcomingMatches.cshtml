@@ -1,0 +1,79 @@
+﻿@model IEnumerable<NBA_GAMES_SCHEDULE.Models.Match>
+@{
+    var teamsDict = new Dictionary<int, string>
+{
+    {1, "Atlanta Hawks"}, {2, "Boston Celtics"}, {3, "Brooklyn Nets"}, {4, "Charlotte Hornets"},
+    {5, "Chicago Bulls"}, {6, "Cleveland Cavaliers"}, {7, "Dallas Mavericks"}, {8, "Denver Nuggets"},
+    {9, "Detroit Pistons"}, {10, "Golden State Warriors"}, {11, "Houston Rockets"}, {12, "Indiana Pacers"},
+    {13, "Los Angeles Clippers"}, {14, "Los Angeles Lakers"}, {15, "Memphis Grizzlies"}, {16, "Miami Heat"},
+    {17, "Milwaukee Bucks"}, {18, "Minnesota Timberwolves"}, {19, "New Orleans Pelicans"}, {20, "New York Knicks"},
+    {21, "Oklahoma City Thunder"}, {22, "Orlando Magic"}, {23, "Philadelphia 76ers"}, {24, "Phoenix Suns"},
+    {25, "Portland Trail Blazers"}, {26, "Sacramento Kings"}, {27, "San Antonio Spurs"}, {28, "Toronto Raptors"},
+    {29, "Utah Jazz"}, {30, "Washington Wizards"}
+
+
+};
+
+    string GetTeamNameById(int teamId)
+    {
+        if (teamsDict.TryGetValue(teamId, out string teamName))
+        {
+            return teamName;
+        }
+
+        return "Unknown Team";
+    }
+}
+<table class="match-table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Home Team</th>
+            <th>Home Team Logo</th>
+            <th>Away Team</th>
+            <th>Away Team Logo</th>
+            <th>Location</th>
+            <th>L</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var match in Model)
+        {
+            <tr>
+                <td>@match.Date?.ToString("yyyy-MM-dd")</td>
+                <td>@match.Time?.ToString(@"hh\:mm")</td>
+                <td>@GetTeamNameById(match.HomeTeamId ?? 0)</td>
+                <td><img src="@Url.Content($"~/images/teams/{match.HomeTeamId}.png")" alt="@GetTeamNameById(match.HomeTeamId ?? 0)" style="width:30px; height:30px;"></td>
+                <td>@GetTeamNameById(match.AwayTeamId ?? 0)</td>
+                <td><img src="@Url.Content($"~/images/teams/{match.AwayTeamId}.png")" alt="@GetTeamNameById(match.AwayTeamId ?? 0)" style="width:30px; height:30px;"></td>
+                <td>@match.Location</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .match-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+        .match-table thead {
+            background-color: #a30000;
+            color: white;
+        }
+
+        .match-table th, .match-table td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .match-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+</style>
+

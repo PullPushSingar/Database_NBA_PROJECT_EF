@@ -1,0 +1,18 @@
+﻿@model IEnumerable<NBA_GAMES_SCHEDULE.Models.Team>  
+<h2>Teams</h2>
+
+<div class="team-logos">
+    @foreach (var team in Model)
+    {
+        <div class="team-card">
+            <a asp-action="Details" asp-controller="Teams" asp-route-id="@team.TeamId">
+                <img src="@team.ImagePath" alt="Logo @team.Name" class="team-logo" />
+            </a>
+            <div>
+                <h3>@team.Name</h3>
+                <p>@team.City</p>
+                <p>Coach: @team.Coach</p>
+            </div>
+        </div>
+    }
+</div>

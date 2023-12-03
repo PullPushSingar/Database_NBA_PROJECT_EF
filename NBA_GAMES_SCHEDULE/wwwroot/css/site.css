@@ -1,0 +1,39 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.team-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: center; 
+}
+
+.team-card {
+    flex: 1 1 120px;
+    max-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    border-radius: 4px; 
+    text-align: center;
+    overflow: hidden; 
+}
+
+.team-logo {
+    width: 100%; 
+    height: auto; 
+}

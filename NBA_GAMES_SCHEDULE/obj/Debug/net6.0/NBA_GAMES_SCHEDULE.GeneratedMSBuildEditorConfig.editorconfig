@@ -1,0 +1,69 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = NBA_GAMES_SCHEDULE
+build_property.RootNamespace = NBA_GAMES_SCHEDULE
+build_property.ProjectDir = C:\Users\huber\Desktop\Zasotosowanie Baz Danych ćwiczenia\pROJEKT\NBA_GAMES_SCHEDULE\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\huber\Desktop\Zasotosowanie Baz Danych ćwiczenia\pROJEKT\NBA_GAMES_SCHEDULE
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/ContactMe/ContactMe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdE1lXENvbnRhY3RNZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/ContactMe/MessageSent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdE1lXE1lc3NhZ2VTZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Matches/UpcomingMatches.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2hlc1xVcGNvbWluZ01hdGNoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Teams/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Teams/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Teams/TeamMatches.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbXNcVGVhbU1hdGNoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huber/Desktop/Zasotosowanie Baz Danych ćwiczenia/pROJEKT/NBA_GAMES_SCHEDULE/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-a5jmf5kfkx

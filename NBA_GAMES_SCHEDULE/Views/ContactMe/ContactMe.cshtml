@@ -1,0 +1,33 @@
+﻿@model NBA_GAMES_SCHEDULE.Models.UserMessage
+
+<form asp-action="ContactMe" method="post">
+    <div class="form-group">
+        <label for="Email">E-mail</label>
+        <input type="email" class="form-control" id="Email" asp-for="Email" required>
+    </div>
+    <div class="form-group">
+        <label for="Nick">Nick</label>
+        <input type="text" class="form-control" id="Nick" asp-for="Nick" required>
+    </div>
+    <div class="form-group">
+        <label for="Message">Message</label>
+        <textarea class="form-control" id="Message" asp-for="Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" >Send</button>
+</form>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+
+        @if (ViewBag.MessageSent == true)
+        {
+            <text>
+                        alert("Wiadomość została wysłana!");
+            </text>
+        }
+                    });
+        });
+    </script>
+}

@@ -1,0 +1,125 @@
+﻿@model NBA_GAMES_SCHEDULE.Models.Team
+@{
+    var teamsDict = new Dictionary<int, string>
+{
+    {1, "Atlanta Hawks"}, {2, "Boston Celtics"}, {3, "Brooklyn Nets"}, {4, "Charlotte Hornets"},
+    {5, "Chicago Bulls"}, {6, "Cleveland Cavaliers"}, {7, "Dallas Mavericks"}, {8, "Denver Nuggets"},
+    {9, "Detroit Pistons"}, {10, "Golden State Warriors"}, {11, "Houston Rockets"}, {12, "Indiana Pacers"},
+    {13, "Los Angeles Clippers"}, {14, "Los Angeles Lakers"}, {15, "Memphis Grizzlies"}, {16, "Miami Heat"},
+    {17, "Milwaukee Bucks"}, {18, "Minnesota Timberwolves"}, {19, "New Orleans Pelicans"}, {20, "New York Knicks"},
+    {21, "Oklahoma City Thunder"}, {22, "Orlando Magic"}, {23, "Philadelphia 76ers"}, {24, "Phoenix Suns"},
+    {25, "Portland Trail Blazers"}, {26, "Sacramento Kings"}, {27, "San Antonio Spurs"}, {28, "Toronto Raptors"},
+    {29, "Utah Jazz"}, {30, "Washington Wizards"}
+
+
+};
+
+     string GetTeamNameById(int teamId)
+    {
+        if (teamsDict.TryGetValue(teamId, out string teamName))
+        {
+            return teamName;
+        }
+
+        return "Unknown Team"; 
+    }
+}
+
+
+<div class="team-container">
+    <div class="team-logo">
+        <img src="@Url.Content("~/images/teams/" + Model.TeamId + ".png")" alt="@Model.Name Logo" />
+    </div>
+    <div class="team-info">
+        <p><strong>Coach:</strong> @Model.Coach</p>
+        <p><strong>City:</strong> @Model.City</p>
+    </div>
+</div>
+
+
+
+<style>
+    .team-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 250px
+    }
+
+
+
+    .team-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .team-info {
+        font-family: Arial, sans-serif;
+        margin-left: 150px;
+    }
+
+
+        .team-info p {
+            font-size: 14px;
+            margin-right: 850px;
+        }
+</style>
+
+
+
+<table class="player-table">
+    <thead>
+        <tr>
+
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Away Team Logo</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var match in Model.HomeMatches)
+        {
+            <tr>
+                <td>@match.Date?.ToString("d")</td>
+                <td>@match.Time?.ToString(@"hh\:mm")</td>
+                <td>@match.Location</td>
+                <td>@GetTeamNameById(match.HomeTeamId ?? 0)</td>
+                <td>@GetTeamNameById(match.AwayTeamId ?? 0)</td>
+                <td><img src="@Url.Content($"~/images/teams/{match.AwayTeamId}.png")" alt="@GetTeamNameById(match.AwayTeamId ?? 0)" style="width:30px; height:30px;"></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .player-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+        .player-table thead {
+            background-color: #a30000;
+            color: white;
+        }
+
+        .player-table th, .player-table td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .player-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+</style>
+
+
+
+

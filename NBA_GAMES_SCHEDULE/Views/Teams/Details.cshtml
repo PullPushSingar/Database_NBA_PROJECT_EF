@@ -1,0 +1,108 @@
+﻿@model NBA_GAMES_SCHEDULE.Models.Team
+
+
+
+<div class="team-container">
+    <div class="team-logo">
+        <img src="@Url.Content("~/images/teams/" + Model.TeamId + ".png")" alt="@Model.Name Logo" />
+    </div>
+    @{<div class="team-info">
+        
+
+        <p><strong>Coach:</strong> @Model.Coach</p>
+        <p><strong>City:</strong> @Model.City</p>
+    </div>
+    }
+</div>
+
+
+
+<style>
+    .team-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 250px
+    }
+
+
+
+
+        .team-logo img {
+            width: 100px; 
+            height: 100px;
+        }
+
+    .team-info {
+        font-family: Arial, sans-serif;
+        margin-left: 150px;
+    }
+
+
+    .team-info p {
+            font-size: 14px;
+            margin-right: 850px; 
+    }
+
+    
+        
+</style>
+
+<a href="@Url.Action("TeamMatches", "Teams", new { id = Model.TeamId })" class="btn btn-primary">See Matches </a>
+
+<table class="player-table">
+    <thead>
+        <tr>
+
+            <th>Player</th>
+            <th>Pos</th>
+            <th>Ht</th>
+            <th>Wt</th>
+            <th>Birth Date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model.Players)
+        {
+            <tr>
+
+                <td>@player.Name</td>
+                <td>@player.Position</td>
+                <td>@player.Height</td>
+                <td>@player.Weight</td>
+                <td>@player.BirthDate?.ToString("MM/dd/yyyy")</td> 
+                
+ 
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .player-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+        .player-table thead {
+            background-color: #a30000; 
+            color: white;
+        }
+
+        .player-table th, .player-table td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd; 
+        }
+
+        .player-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+</style>
+
+
+
+
